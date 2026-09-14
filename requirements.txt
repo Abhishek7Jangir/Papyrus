@@ -1,0 +1,11 @@
+# torch is pinned to a CUDA 12.8 build (local version tag +cu128).
+# Install with:
+#   pip install torch==2.10.0+cu128 --extra-index-url https://download.pytorch.org/whl/cu128
+# or drop the +cu128 suffix to get a plain CPU/PyPI build instead.
+streamlit==1.63.0
+torch==2.10.0+cu128
+transformers==5.0.0
+accelerate==1.13.0
+sentence-transformers==5.4.1
+faiss-cpu==1.15.0
+pypdf==6.14.2
