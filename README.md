@@ -81,7 +81,7 @@ The assistant's persona is intentionally sarcastic/ironic (set in the system pro
 | Embeddings | sentence-transformers (`all-MiniLM-L6-v2`, 384-dim) |
 | Vector store | FAISS (`IndexFlatL2`, in-memory, session-scoped) |
 | Reranker | `cross-encoder/ms-marco-MiniLM-L6-v2` |
-| LLM | `Qwen/WebWorld-8B` via Hugging Face `transformers` pipeline |
+| LLM | `Qwen/Qwen3-8B` via Hugging Face `transformers` pipeline |
 | Tunneling (notebook mode) | Cloudflare Tunnel (`cloudflared`) |
 
 ## Configuration
