@@ -4,9 +4,11 @@
 
 A retrieval-augmented chatbot for PDF documents, built with Streamlit, FAISS, and a cross-encoder reranker on top of an open-source LLM.
 
-## Table of contents
+## Demo
 
-- [Demo](#demo)
+https://github.com/user-attachments/assets/826daef6-af12-4ac2-9b4d-4b8d102ff3c8
+
+## Table of contents
 - [Features](#features)
 - [Architecture](#architecture)
 - [Tech stack](#tech-stack)
@@ -16,10 +18,6 @@ A retrieval-augmented chatbot for PDF documents, built with Streamlit, FAISS, an
 - [Evaluation](#evaluation)
 - [Limitations](#limitations)
 - [License](#license)
-
-## Demo
-
-https://github.com/user-attachments/assets/826daef6-af12-4ac2-9b4d-4b8d102ff3c8
 
 
 
