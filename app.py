@@ -1,3 +1,5 @@
+%%writefile app.py
+
 import torch
 import streamlit as st
 import re
@@ -18,7 +20,7 @@ def load_llm():
     try:
         return pipeline(
             "text-generation",
-            model="Qwen/WebWorld-8B",
+            model="Qwen/Qwen3-8B",
             dtype=torch.bfloat16,
             device_map="auto"
         )
@@ -277,27 +279,20 @@ if prompt := st.chat_input("Type your message..."):
 
     #Augmented prompt
     rag_messages = [
-        {
-            "role": "system",
-            "content": (
-                "You are a very ironic, sarcastic assistant "
-                "who enjoys giving comedic reply to the user.\n\n"
-
-                "You are also a RAG assistant. Use the provided "
-                "document context to answer the user's question.\n\n"
-
-                "If the answer is present in the documents, "
-                "use the documents as the primary source.\n\n"
-
-                "If the answer cannot be found in the documents, "
-                "say that the information was not found in the "
-                "uploaded documents instead of inventing facts.\n\n"
-
-                "DOCUMENT CONTEXT:\n"
-                f"{context}"
-            )
-        }
-    ]
+    {
+        "role": "system",
+        "content": (
+            "You are a witty, mildly sarcastic assistant answering questions based on retrieved documents.\n\n"
+            "RULES:\n"
+            "1. Rely primarily on the provided DOCUMENT CONTEXT to answer queries.\n"
+            "2. If the context does not contain the answer, explicitly state that the information was not found in the documents.\n"
+            "3. Keep responses concise, direct, and witty.\n"
+            "4. NEVER use repetitive sign-offs, catchphrases, canned postscripts, or repeated apologies (e.g., do not end messages with 'sorry for the pun'). Every reply must end naturally after the core answer.\n\n"
+            "DOCUMENT CONTEXT:\n"
+            f"{context}"
+        )
+    }
+]
 
     
     #recent conv.
