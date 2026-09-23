@@ -17,7 +17,7 @@ A retrieval-augmented chatbot for PDF documents, built with Streamlit, FAISS, an
 
 ## Demo
 
-*(video coming soon)*
+<video src="https://github.com/user-attachments/assets/92334a68-a267-4bed-8989-0d0680094f20" width="80%" controls></video>
 
 ## Features
 
